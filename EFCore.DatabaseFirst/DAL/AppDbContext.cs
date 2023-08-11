@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace EFCore.DatabaseFirst.DAL
     {
         public DbSet<Product> Products { get; set; }
 
+        /*
         public AppDbContext()
         {
                 
@@ -20,5 +22,12 @@ namespace EFCore.DatabaseFirst.DAL
         {
                     
         }
+        */
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
+        }
+
     }
 }

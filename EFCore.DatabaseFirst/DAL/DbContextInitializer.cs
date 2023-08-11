@@ -12,7 +12,7 @@ namespace EFCore.DatabaseFirst.DAL
     {
         public static IConfigurationRoot Configuration;
 
-        public static DbContextOptionsBuilder<AppDbContext> OptionsBuilder;
+        //public static DbContextOptionsBuilder<AppDbContext> OptionsBuilder;
 
         public static void Build()
         {
@@ -21,8 +21,8 @@ namespace EFCore.DatabaseFirst.DAL
 
             Configuration = builder.Build();
             
-            OptionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            OptionsBuilder.UseSqlServer(Configuration.GetConnectionString("SqlCon")); 
+            //OptionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+            //OptionsBuilder.UseSqlServer(Configuration.GetConnectionString("SqlCon")); 
         }
 
     }
