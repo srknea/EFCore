@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.DatabaseFirst", "EFCore.DatabaseFirst\EFCore.DatabaseFirst.csproj", "{0EC59E09-F455-4A26-A0E4-26EBA31B2735}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.DatabaseFirstByScaffold", "EFCore.DatabaseFirstByScaffold\EFCore.DatabaseFirstByScaffold.csproj", "{B8DD00B1-4867-4E1A-AB8B-B578C92FF7F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.DatabaseFirstByScaffold", "EFCore.DatabaseFirstByScaffold\EFCore.DatabaseFirstByScaffold.csproj", "{B8DD00B1-4867-4E1A-AB8B-B578C92FF7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst", "EFCore.CodeFirst\EFCore.CodeFirst.csproj", "{65D00347-0126-41F2-B0E5-02EF6AA317A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B8DD00B1-4867-4E1A-AB8B-B578C92FF7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DD00B1-4867-4E1A-AB8B-B578C92FF7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8DD00B1-4867-4E1A-AB8B-B578C92FF7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D00347-0126-41F2-B0E5-02EF6AA317A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D00347-0126-41F2-B0E5-02EF6AA317A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D00347-0126-41F2-B0E5-02EF6AA317A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D00347-0126-41F2-B0E5-02EF6AA317A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
