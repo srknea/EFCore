@@ -5,22 +5,19 @@ DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var newProduct = new Product() { Name = "Kurşun Kalem", Price = 100, Stock = 200, Barcode = "A-0040-Z" };
-
-    Console.WriteLine($"First state: {_context.Entry(newProduct).State}");
-
-
-    _context.Entry(newProduct).State = EntityState.Added;
-
-    //await _context.Products.AddAsync(newProduct);
-
-    Console.WriteLine($"Last state: {_context.Entry(newProduct).State}");
+    var product = await _context.Products.FirstAsync();
+    
+    Console.WriteLine($"First state: {_context.Entry(product).State}");
 
 
+    product.Stock = 999;
 
+    Console.WriteLine($"Last state: {_context.Entry(product).State}");
+    
+    
     await _context.SaveChangesAsync();
 
-    Console.WriteLine($"State after save changes: {_context.Entry(newProduct).State}");
+    Console.WriteLine($"State after save changes: {_context.Entry(product).State}");
 }
 
 Console.ReadLine();
