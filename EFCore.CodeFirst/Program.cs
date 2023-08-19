@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using EFCore.CodeFirst.DAL;
+﻿using EFCore.CodeFirst.DAL;
 using Microsoft.EntityFrameworkCore;
 
 DbContextInitializer.Build();
@@ -18,7 +16,9 @@ using (var _context = new AppDbContext())
 
     products.ForEach(p =>
     {
-        Console.WriteLine($"{p.Id} - {p.Name} - {p.Price} - {p.Stock}");
+        var state = _context.Entry(p).State;
+
+        Console.WriteLine($"{p.Id} - {p.Name} - {p.Price} - {p.Stock} --- State: {state}");
     });
 }
 
