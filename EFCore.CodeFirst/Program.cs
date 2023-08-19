@@ -5,21 +5,22 @@ DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var products = await _context.Products.ToListAsync();
+    var newProduct = new Product() { Name = "Kurşun Kalem", Price = 100, Stock = 200, Barcode = "A-0040-Z" };
 
-    /*
-    foreach (var item in products)
-    {
-        Console.WriteLine($"{item.Id} - {item.Name} - {item.Price}");
-    }
-    */
+    Console.WriteLine($"First state: {_context.Entry(newProduct).State}");
 
-    products.ForEach(p =>
-    {
-        var state = _context.Entry(p).State;
 
-        Console.WriteLine($"{p.Id} - {p.Name} - {p.Price} - {p.Stock} --- State: {state}");
-    });
+    _context.Entry(newProduct).State = EntityState.Added;
+
+    //await _context.Products.AddAsync(newProduct);
+
+    Console.WriteLine($"Last state: {_context.Entry(newProduct).State}");
+
+
+
+    await _context.SaveChangesAsync();
+
+    Console.WriteLine($"State after save changes: {_context.Entry(newProduct).State}");
 }
 
 Console.ReadLine();
