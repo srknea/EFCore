@@ -10,7 +10,9 @@ using (var _context = new AppDbContext())
     Console.WriteLine($"First state: {_context.Entry(product).State}");
 
 
-    product.Stock = 999;
+    _context.Entry(product).State = EntityState.Deleted;
+
+    //_context.Remove(product);
 
     Console.WriteLine($"Last state: {_context.Entry(product).State}");
     
