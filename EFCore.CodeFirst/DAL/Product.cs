@@ -14,5 +14,6 @@ namespace EFCore.CodeFirst.DAL
         public int Stock { get; set; }
         public string? Description { get; set; }
         public string Barcode { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }
