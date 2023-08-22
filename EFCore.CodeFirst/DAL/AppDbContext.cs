@@ -21,6 +21,14 @@ namespace EFCore.CodeFirst.DAL
             optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));   
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<Product>().Property(p => p.Description).HasMaxLength(100);
+            
+            base.OnModelCreating(modelBuilder);
+        }
+
         public override int SaveChanges()
         {
             ChangeTracker.Entries().ToList().ForEach(e =>
