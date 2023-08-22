@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using EFCore.CodeFirst.Relationships.DAL;
+
+DbContextInitializer.Build();
+
+using (var _context = new AppDbContext())
+{
+    
+}
+
+Console.ReadLine();
