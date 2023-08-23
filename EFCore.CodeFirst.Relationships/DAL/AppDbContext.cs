@@ -19,5 +19,14 @@ namespace EFCore.CodeFirst.Relationships.DAL
 
             optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<Category>().HasMany(x => x.Products).WithOne(x => x.Category).HasForeignKey(x => x.Category_Id);
+
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
