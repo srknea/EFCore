@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace EFCore.CodeFirst.Relationships.DAL
         public int Barcode { get; set; }
 
         public int Category_Id { get; set; }
+        
+        [ForeignKey("Category_Id")]
         public Category Category { get; set; }
     }
 }
