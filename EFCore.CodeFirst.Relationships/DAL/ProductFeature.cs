@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace EFCore.CodeFirst.Relationships.DAL
 {
-    public class Product
+    public class ProductFeature
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int Stock { get; set; }
-        public int Barcode { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public string Color { get; set; }
 
-        public ProductFeature ProductFeature { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }
