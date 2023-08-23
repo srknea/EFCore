@@ -14,7 +14,7 @@ namespace EFCore.CodeFirst.Relationships.DAL
         public int Height { get; set; }
         public string Color { get; set; }
 
-        public int ProductId { get; set; }
+        public int Product_Id { get; set; }
         public Product Product { get; set; }
     }
 }
