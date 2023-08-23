@@ -19,12 +19,5 @@ namespace EFCore.CodeFirst.Relationships.DAL
 
             optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Product>().HasOne(x => x.ProductFeature).WithOne(x => x.Product).HasForeignKey<ProductFeature>(x => x.Product_Id);
-
-            base.OnModelCreating(modelBuilder);
-        }
     }
 }

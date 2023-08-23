@@ -15,6 +15,8 @@ namespace EFCore.CodeFirst.Relationships.DAL
         public string Color { get; set; }
 
         public int Product_Id { get; set; }
+        
+        [ForeignKey("Product_Id")]
         public Product Product { get; set; }
     }
 }
