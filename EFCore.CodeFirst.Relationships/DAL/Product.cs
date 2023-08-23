@@ -14,10 +14,5 @@ namespace EFCore.CodeFirst.Relationships.DAL
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public int Barcode { get; set; }
-
-        public int Category_Id { get; set; }
-        
-        [ForeignKey("Category_Id")]
-        public Category Category { get; set; }
     }
 }
