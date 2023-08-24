@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.DatabaseFirstByScaff
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst", "EFCore.CodeFirst\EFCore.CodeFirst.csproj", "{65D00347-0126-41F2-B0E5-02EF6AA317A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.Relationships", "EFCore.CodeFirst.Relationships\EFCore.CodeFirst.Relationships.csproj", "{6D71D057-6661-4497-AEF0-67852947C342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationships", "EFCore.CodeFirst.Relationships\EFCore.CodeFirst.Relationships.csproj", "{6D71D057-6661-4497-AEF0-67852947C342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.Relationships.OneToMany.DataAdd", "EFCore.CodeFirst.Relationships.OneToMany.DataAdd\EFCore.CodeFirst.Relationships.OneToMany.DataAdd.csproj", "{F6088505-07B6-41F2-BBED-8009CA26CFC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6D71D057-6661-4497-AEF0-67852947C342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D71D057-6661-4497-AEF0-67852947C342}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D71D057-6661-4497-AEF0-67852947C342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6088505-07B6-41F2-BBED-8009CA26CFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6088505-07B6-41F2-BBED-8009CA26CFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6088505-07B6-41F2-BBED-8009CA26CFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6088505-07B6-41F2-BBED-8009CA26CFC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
