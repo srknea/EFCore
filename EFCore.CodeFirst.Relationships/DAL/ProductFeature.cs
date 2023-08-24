@@ -9,7 +9,6 @@ namespace EFCore.CodeFirst.Relationships.DAL
 {
     public class ProductFeature
     {
-        [ForeignKey("Product")]
         public int Id { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
