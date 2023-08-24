@@ -18,5 +18,18 @@ namespace EFCore.CodeFirst.Relationships.DAL
 
             optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                .HasMany(x => x.Teachers)
+                .WithMany(x => x.Students)
+                .UsingEntity<Dictionary<string, object>>(
+                 "StudentTeacherManyToMany",
+                 x => x.HasOne<Teacher>().WithMany().HasForeignKey("Teacher_Id").HasConstraintName("FK__TeacherId"),
+                 x => x.HasOne<Student>().WithMany().HasForeignKey("Student_Id").HasConstraintName("FK__StudentId")
+                 );
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
