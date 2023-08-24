@@ -4,12 +4,19 @@ DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var student = new Student(){ Name = "Serkan", Age = 12};
+    var teacher = new Teacher()
+    {
+        Name = "Zeynep",
+        Students = new List<Student>() 
+        { 
+            new Student() { Name = "Fidan", Age = 10 },
+            new Student() { Name = "Canan", Age = 11 },
+            new Student() { Name = "Ömer", Age = 12 },
+            new Student() { Name = "Batuhan", Age = 13 }
+        }
+    };
 
-    student.Teachers.Add(new Teacher() { Name = "Murat"});
-    student.Teachers.Add(new Teacher() { Name = "Sevgül"});
-
-    _context.Students.Add(student); 
+    _context.Teachers.Add(teacher); 
 
     _context.SaveChanges();
 }
