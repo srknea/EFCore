@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationsh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationships.OneToOne.DataAdd", "EFCore.CodeFirst.Relationships.OneToOne.DataAdd\EFCore.CodeFirst.Relationships.OneToOne.DataAdd.csproj", "{C6A4ACAC-0D30-49A4-9077-77284AAD2554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.Relationships.ManyToMany.DataAdd", "EFCore.CodeFirst.Relationships.ManyToMany.DataAdd\EFCore.CodeFirst.Relationships.ManyToMany.DataAdd.csproj", "{E829B27E-1809-4390-86BE-E6D7F677C622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationships.ManyToMany.DataAdd", "EFCore.CodeFirst.Relationships.ManyToMany.DataAdd\EFCore.CodeFirst.Relationships.ManyToMany.DataAdd.csproj", "{E829B27E-1809-4390-86BE-E6D7F677C622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.Relationships.DeleteBehaviors", "EFCore.CodeFirst.Relationships.DeleteBehaviors\EFCore.CodeFirst.Relationships.DeleteBehaviors.csproj", "{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{E829B27E-1809-4390-86BE-E6D7F677C622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E829B27E-1809-4390-86BE-E6D7F677C622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E829B27E-1809-4390-86BE-E6D7F677C622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
