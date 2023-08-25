@@ -5,19 +5,17 @@ DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var category = _context.Categories.First();
-
-    // Eager loading
-    var categoryWithProducts = _context.Categories
-        .Include(c => c.Products)
-        .First();
-
     // Eager loading with nested property
-    var categoryWithProductsAndProductFeatures = _context.Categories
+    var category = _context.Categories
         .Include(c => c.Products)
         .ThenInclude(p => p.ProductFeature)
-        .First();
+    .First();
 
+    category.Products.ForEach(product =>
+    {
+        Console.WriteLine($"{category.Name} - {product.Name} - {product.ProductFeature.Color}");
+
+    });
 }
 
 Console.ReadKey();
