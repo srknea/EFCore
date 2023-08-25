@@ -1,40 +1,23 @@
 ﻿using EFCore.CodeFirst.RelatedDataLoad.EagerLoading.DAL;
+using Microsoft.EntityFrameworkCore;
 
 DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var category = new Category() {Name = "Kalemler"};
+    var category = _context.Categories.First();
 
-    category.Products.Add(new Product() 
-    {
-        Name = "Pilot Kalem",
-        Price = 12.50m,
-        Stock = 100,
-        Barcode = 123456789,
-        ProductFeature = new ProductFeature() 
-            { 
-            Width = 10, Height = 20, Color = "Mavi" 
-            }
-    });
+    // Eager loading
+    var categoryWithProducts = _context.Categories
+        .Include(c => c.Products)
+        .First();
 
-    category.Products.Add(new Product()
-    {
-        Name = "Kurşun Kalem",
-        Price = 40.50m,
-        Stock = 200,
-        Barcode = 123456789,
-        ProductFeature = new ProductFeature()
-        {
-            Width = 10,
-            Height = 20,
-            Color = "Siyah"
-        }
-    });
+    // Eager loading with nested property
+    var categoryWithProductsAndProductFeatures = _context.Categories
+        .Include(c => c.Products)
+        .ThenInclude(p => p.ProductFeature)
+        .First();
 
-    await _context.AddAsync(category);
-
-    await _context.SaveChangesAsync();
 }
 
 Console.ReadKey();
