@@ -23,7 +23,7 @@ namespace EFCore.CodeFirst.Relationships.DeleteBehaviors.DAL
             modelBuilder.Entity<Category>()
                 .HasMany(x => x.Products)
                 .WithOne(x => x.Category)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(modelBuilder);
         }
