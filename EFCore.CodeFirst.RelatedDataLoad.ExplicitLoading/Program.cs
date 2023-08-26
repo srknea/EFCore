@@ -4,14 +4,13 @@ DbContextInitializer.Build();
 
 using (var _context = new AppDbContext())
 {
-    var category = _context.Categories.First();
+    var product = _context.Products.First();
 
-    // Explicit Loading
-    _context.Entry(category)
-        .Collection(c => c.Products)
+    _context.Entry(product)
+        .Reference(p => p.ProductFeature)
         .Load();
 
-    category.Products.ForEach(p => Console.WriteLine(p.Name));
+    Console.WriteLine(product.ProductFeature.Color);
 }
 
 Console.ReadKey();
