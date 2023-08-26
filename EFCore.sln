@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.RelatedDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading", "EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading\EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading.csproj", "{F27B950C-0CCA-4A58-A600-B18159F305E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.RelatedDataLoad.LazyLoading", "EFCore.CodeFirst.RelatedDataLoad.LazyLoading\EFCore.CodeFirst.RelatedDataLoad.LazyLoading.csproj", "{C058B088-3AFA-45F2-99A5-34C4CC38ECC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C058B088-3AFA-45F2-99A5-34C4CC38ECC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C058B088-3AFA-45F2-99A5-34C4CC38ECC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C058B088-3AFA-45F2-99A5-34C4CC38ECC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C058B088-3AFA-45F2-99A5-34C4CC38ECC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
