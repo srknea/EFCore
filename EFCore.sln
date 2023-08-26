@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationsh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.Relationships.DeleteBehaviors", "EFCore.CodeFirst.Relationships.DeleteBehaviors\EFCore.CodeFirst.Relationships.DeleteBehaviors.csproj", "{6BAE4ADA-2B86-478D-962E-4FF2D0206E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.RelatedDataLoad.EagerLoading", "EFCore.CodeFirst.RelatedDataLoad.EagerLoading\EFCore.CodeFirst.RelatedDataLoad.EagerLoading.csproj", "{9BD05CCF-44F7-4D16-8931-FE7B831379DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.CodeFirst.RelatedDataLoad.EagerLoading", "EFCore.CodeFirst.RelatedDataLoad.EagerLoading\EFCore.CodeFirst.RelatedDataLoad.EagerLoading.csproj", "{9BD05CCF-44F7-4D16-8931-FE7B831379DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading", "EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading\EFCore.CodeFirst.RelatedDataLoad.ExplicitLoading.csproj", "{F27B950C-0CCA-4A58-A600-B18159F305E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{9BD05CCF-44F7-4D16-8931-FE7B831379DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BD05CCF-44F7-4D16-8931-FE7B831379DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BD05CCF-44F7-4D16-8931-FE7B831379DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27B950C-0CCA-4A58-A600-B18159F305E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
