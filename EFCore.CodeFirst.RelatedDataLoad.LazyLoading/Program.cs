@@ -11,6 +11,11 @@ using (var _context = new AppDbContext())
     Console.WriteLine("\nLoading products...\n");
 
     var products = category.Products;
+
+    foreach (var item in products)
+    {
+        Console.WriteLine($"\nProduct Feature: {item.ProductFeature}\n");
+    }
 }
 
 Console.ReadKey();
