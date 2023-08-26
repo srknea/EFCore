@@ -15,8 +15,8 @@ namespace EFCore.CodeFirst.RelatedDataLoad.LazyLoading.DAL
         public int Barcode { get; set; }
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
-        public ProductFeature ProductFeature { get; set; }
+        public virtual ProductFeature ProductFeature { get; set; }
     }
 }

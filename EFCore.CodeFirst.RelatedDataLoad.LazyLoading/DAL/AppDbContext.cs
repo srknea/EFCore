@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,10 @@ namespace EFCore.CodeFirst.RelatedDataLoad.LazyLoading.DAL
         {
             DbContextInitializer.Build();
 
-            optionsBuilder.UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
+            optionsBuilder
+                .LogTo(Console.WriteLine, LogLevel.Information)
+                .UseLazyLoadingProxies()
+                .UseSqlServer(DbContextInitializer.Configuration.GetConnectionString("SqlCon"));
         }
     }
 }
